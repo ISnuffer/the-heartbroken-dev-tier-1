@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Snuffer</title>
+  </head>
+  <body>
+	<div id="buffer-top" class="buffer-top"></div>
+	<div id="header-bar" class="header">
+		<div id="header-frame" class="frame">
+			<h1 id="title">Isaac Snuffer</h1>
+			<h3>The Man, The Myth, The Legend</h3>
+		</div>
+	</div>
+	<div id="menu-bar" class="menu">
+		<table id="main-link-table" class="link-table">
+		<thead>
+			<tr>
+				<th>
+				<h4><u>Navigation</u></h4>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+				<ul>
+				<li><a  href="./index.html">Resume</a></li>
+				<li><a href="./3T.html">Tic-Tac-Toe</a></li>
+				</ul>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<div id="main-content" class="main">
+		<table id="game">
+            <tr>
+                <td id="ta1" class="position"><p id="a1" class="marker"></p></td>
+                <td id="ta2" class="position"><p id="a2" class="marker"></p></td>
+                <td id="ta3" class="position"><p id="a3" class="marker"></p></td>
+            </tr>
+            <tr>
+                <td id="tb1" class="position"><p id="b1" class="marker"></p></td>
+                <td id="tb2" class="position"><p id="b2" class="marker"></p></td>
+                <td id="tb3" class="position"><p id="b3" class="marker"></p></td>
+            </tr>
+            <tr>
+                <td id="tc1" class="position"><p id="c1" class="marker"></p></td>
+                <td id="tc2" class="position"><p id="c2" class="marker"></p></td>
+                <td id="tc3" class="position"><p id="c3" class="marker"></p></td>
+            </tr>
+        </table>
+        <form id="add_player">
+            <fieldset>
+                <h3>Complete the form please :)</h3><br>
+                <label for="name_input">Name: </label><input id="name_input" type="text"><br>
+                <label for="marker_select">Marker: </label><select id="marker_select">
+					<option value = "X">X</option>
+					<option value = "O">O</option>
+				</select><br>
+                <button id="Player_submit" type="button">Add Player</button>
+            </fieldset>
+        </form>
+        <div id="TTTM" class="messages"></div>
+        <button id="play">Play</button>
+		<form id="controller">
+			<select id="positionSelect">
+				<option value = "a1">a1</option>
+				<option value = "a2">a2</option>
+				<option value = "a3">a3</option>
+				<option value = "b1">b1</option>
+				<option value = "b2">b2</option>
+				<option value = "b3">b3</option>
+				<option value = "c1">c1</option>
+				<option value = "c2">c2</option>
+				<option value = "c3">c3</option>
+			</select>
+			<button id="choose" type = "button">Select Position</button>
+		</form>
+	</div>
+	<div class="buffer-bottom"></div>
+	<div id="footer" class="footer"></div>
+    <script src="./script.js"></script>
+  </body>
+
+</html>
