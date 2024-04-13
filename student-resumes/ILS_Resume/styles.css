@@ -1,3 +1,9 @@
+/*General template stuff*/
+
+:root {
+	--frameWidth: 37.5%;
+}
+
 *{
 	box-sizing: border-box;
 }
@@ -34,7 +40,7 @@
 	position: absolute;
 	font-size: 30px;
 	top: 15px;
-	left: 55px;
+	left: 42.5px;
 
 }
 .frame h3{
@@ -45,7 +51,7 @@
 	font-size: 15px;
 	position: absolute;
 	top: 45px;
-	left: 37.5px;
+	left: 110px;
 	
 }
 .frame{
@@ -56,7 +62,7 @@
 	height: 75px;
 	position: absolute;
 	top: 10%;
-	left: 35%;
+	left: var(--frameWidth);
 	background-color: #9eceb4;
 	border-radius: 10px;
 	align-items: center;
@@ -74,28 +80,41 @@
 	border: 2px solid black;
 }
 .link-table{
-	width: 75px;
-	margin: auto;
+	width: 125px;
+	height: 300px;
+	margin: 0;
 	border: 2px solid black;
 	font-family: sans-serif;
 	border-radius: 10px;
 	background-color: #9eceb4;
 	padding: 0;
+	position: absolute;
 }
-.link-table th{
+
+#nav-link-table {
+	top: 0;
+}
+
+#site-link-table {
+	top: 325px;
+}
+
+.headerRow{
 	border-bottom: 1px solid black;
-	height: 5px;
-	padding: 0;
 	text-align: bottom;
+	height: 25px;
+	padding: 0;
+	margin: 0;
 }
 .link-table h4{
 	text-align: center;
 	padding: 0;
+	margin-top: 2.5px;
 }
 .link-table a{
 	text-align: left;
 }
-.link-table td{
+.link-body {
 	align-items: left;
 	padding: 0;
 }
@@ -476,7 +495,7 @@
 	position: relative;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) and (min-width: 801px) {
 
 	.buffer-top {
 		border-bottom: 2px solid black;
@@ -489,6 +508,10 @@
 	.main {
 		width: 100%;
 		left: 0;
+	}
+
+	.frame {
+		left: calc(var(--frameWidth) - 7.5%);
 	}
 
 .menu{
@@ -504,6 +527,37 @@
 }
   }
 
+  @media (max-width: 800px) {
+	.buffer-top {
+		border-bottom: 2px solid black;
+	}
+
+	.footer {
+		width: 100%;
+		left: 0;
+	}
+	.main {
+		width: 100%;
+		left: 0;
+	}
+
+	.frame {
+		left: calc(var(--frameWidth) - 17.5%);
+	}
+
+.menu{
+	width: 10%;
+	height: 85%;
+	background-color: #f47d43;
+	color: #366665;
+	position: fixed;
+	top: 15%;
+	left: 0;
+	border: 2px solid black;
+	display: none;
+  }
+}
+
   @media (max-height: 600px) {
 	.frame h1{
 		padding-bottom: 0;
@@ -513,7 +567,7 @@
 		position: absolute;
 		font-size: 15px;
 		top: 7.5px;
-		left: 27.5px;
+		left: 20px;
 	
 	}
 	.frame h3{
@@ -524,7 +578,7 @@
 		font-size: 7.5px;
 		position: absolute;
 		top: 22.5px;
-		left: 18.75px;
+		left: 55px;
 		
 	}
 	.frame{
@@ -535,7 +589,7 @@
 		height: 37.5px;
 		position: absolute;
 		top: 10%;
-		left: 40%;
+		left: calc(var(--frameWidth) - 5%);
 		background-color: #9eceb4;
 		border-radius: 10px;
 		align-items: center;
