@@ -7,6 +7,15 @@
 *{
 	box-sizing: border-box;
 }
+
+.redText {
+	color: #FF0000;
+}
+
+.blackText {
+	color: #000000;
+}
+
 .buffer-top{
 	width: 10%;
 	height: 15%;
@@ -179,9 +188,76 @@
 	margin: 0;
 }
 
+#messages {
+	border: 2px solid black;
+	margin: 0;
+	padding: 0;
+	height: 25%;
+	width: 30%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 3%;
+	left: 65%;
+	overflow: auto;
+	text-align: left;
+	justify-content: start;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#gui {
+	border: 2px solid black;
+	height: 50%;
+	width: 30%;
+	position: absolute;
+	top: 33%;
+	left: 65%;
+	margin: 0;
+	padding: 0;
+	background-color: #75a85D;
+	overflow: auto;
+	color: #000000;
+	
+}
+
+#anteInput {
+	background-color: white;
+	width: 25px;
+	height: 20px;
+	position: absolute;
+	left: 15%;
+}
+
+#anteUp {
+	position: absolute;
+	left: 25%;
+	display: none;
+}
+
+#anteDown {
+	position: absolute;
+	left: 45%;
+	display: none;
+}
+
+#anteSubmit {
+	position: absolute;
+	left: 75%;
+	display: none;
+}
+
+#userActions {
+	display: none;
+}
+
+#actionSelect {
+	width: 100px;
+}
+
 #blackJackTable {
 	background-color: #75a85D;
-	width: 80%;
+	width: 50%;
 	height: 80%;
 	margin: auto;
 	position: absolute;
@@ -191,6 +267,7 @@
 	border: 2px solid black;
 	border-radius: 10px;
 	padding: 0;
+	overflow: auto;
 }
 
 .card {
@@ -199,6 +276,35 @@
 	border-radius: 2.5px;
 	padding: 0;
 	margin: 0;
+}
+.corner {
+	font-size: x-small;
+}
+.topLeft {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.topRight {
+	position: absolute;
+	top: 5px;
+	left: 32.5px;
+	width: 7.5px;
+	height: 10px;
+}
+
+.bottomRight {
+	position: absolute;
+	top: 60px;
+	left: 32.5px;
+}
+
+.bottomLeft {
+	position: absolute;
+	top: 60px;
+	left: 5px;
+	width: 7.5px;
+	height: 10px;
 }
 
 .shown {
@@ -212,46 +318,202 @@
 	left: 65%;
 }
 
+.stack {
+	width: 50px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#mainStack {
+	position: absolute;
+	left: 45%;
+}
+
+#splitStack {
+	position: absolute;
+	left: 25%;
+}
+
+#splitCardOne {
+	display: none;
+}
+
+#splitCardTwo {
+	display: none;
+}
+
+#splitCardThree {
+	display: none;
+}
+
+#splitCardFour {
+	display: none;
+}
+
+#splitCardFive {
+	display: none;
+}
+
+#splitCardSix {
+	display: none;
+}
+
+#splitCardSeven {
+	display: none;
+}
+
+#splitCardEight {
+	display: none;
+}
+
+#splitCardNine {
+	display: none;
+}
+
+#splitCardTen {
+	display: none;
+}
+
+#splitCardEleven {
+	display: none;
+}
+
+#splitCardTwelve {
+	display: none;
+}
+
 #dealerShownCard {
 	position: absolute;
 	top: 18%;
-	left: 45%;
 	z-index: 0;
+	display: none;
 }
 
 #dealerHiddenCard {
 	position: absolute;
 	top: 15%;
-	left: 45%;
 	z-index: 1;
+	display: none;
 }
 
 #playerCardOne {
-	position: absolute;
-	top: 75%;
-	left: 45%;
-	z-index: 0;
+	display: none;
 }
 
 #playerCardTwo {
-	position: absolute;
-	top: 73%;
-	left: 45%;
-	z-index: 1;
+	display: none;
 }
 
 #playerCardThree {
-	position: absolute;
-	top: 71%;
-	left: 45%;
-	z-index: 2;
+	display: none;
 }
 
 #playerCardFour {
+	display: none;
+}
+
+#playerCardFive {
+	display: none;
+}
+
+#playerCardSix {
+	display: none;
+}
+
+#playerCardSeven {
+	display: none;
+}
+
+#playerCardEight {
+	display: none;
+}
+
+#playerCardNine {
+	display: none;
+}
+
+#playerCardTen {
+	display: none;
+}
+
+#playerCardEleven {
+	display: none;
+}
+
+#playerCardTwelve {
+	display: none;
+}
+
+.one {
+	position: absolute;
+	top: 75%;
+	z-index: 0;
+}
+
+.two {
+	position: absolute;
+	top: 72%;
+	z-index: 1;
+}
+
+.three {
 	position: absolute;
 	top: 69%;
-	left: 45%;
+	z-index: 2;
+}
+
+.four {
+	position: absolute;
+	top: 66%;
 	z-index: 3;
+}
+
+.five {
+	position: absolute;
+	top: 63%;
+	z-index: 4;
+}
+
+.six {
+	position: absolute;
+	top: 60%;
+	z-index: 5;
+}
+
+.seven {
+	position: absolute;
+	top: 57%;
+	z-index: 6;
+}
+
+.eight {
+	position: absolute;
+	top: 54%;
+	z-index: 7;
+}
+
+.nine {
+	position: absolute;
+	top: 51%;
+	z-index: 8;
+}
+
+.ten {
+	position: absolute;
+	top: 48%;
+	z-index: 9;
+}
+
+.eleven {
+	position: absolute;
+	top: 45%;
+	z-index: 10;
+}
+.twelve {
+	position: absolute;
+	top: 42%;
+	z-index: 11;
 }
 
 /*below is for tic tac toe*/
@@ -495,7 +757,7 @@
 	position: relative;
   }
 
-  @media (max-width: 1300px) and (min-width: 801px) {
+  @media (max-width: 1400px) and (min-width: 801px) {
 
 	.buffer-top {
 		border-bottom: 2px solid black;
@@ -512,6 +774,15 @@
 
 	.frame {
 		left: calc(var(--frameWidth) - 7.5%);
+	}
+
+	#add_player {
+		/*left: 0;*/
+		width: 25px;
+		height: 25px;
+	}
+	#name_input {
+		width: 75px;
 	}
 
 .menu{
@@ -543,6 +814,14 @@
 
 	.frame {
 		left: calc(var(--frameWidth) - 17.5%);
+	}
+	#add_player {
+		left: 0;
+		width: 25px;
+		height: 25px;
+	}
+	#name_input {
+		width: 50px;
 	}
 
 .menu{
